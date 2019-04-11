@@ -108,7 +108,7 @@ return [
                 'songs' => \App\GraphQL\Query\SongsQuery::class
             ],
             'mutation' => [
-//                'createArtist' => \App\GraphQL\Mutation\CreateArtistMutation::class
+                'createArtist' => \App\GraphQL\Mutation\CreateArtistMutation::class
             ],
             'middleware' => [],
             'method' => ['get', 'post'],
