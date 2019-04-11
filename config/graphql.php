@@ -100,7 +100,7 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // 'example_query' => ExampleQuery::class,
+               'artist' => \App\GraphQL\Query\ArtistQuery::class
             ],
             'mutation' => [
                 // 'example_mutation'  => ExampleMutation::class,
@@ -120,7 +120,7 @@ return [
     // ]
     //
     'types' => [
-        // 'example'           => ExampleType::class,
+        'Artist' => \App\GraphQL\Type\ArtistType::class
         // 'relation_example'  => ExampleRelationType::class,
     ],
 
