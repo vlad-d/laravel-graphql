@@ -100,10 +100,15 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-               'artist' => \App\GraphQL\Query\ArtistQuery::class
+                'artists' => \App\GraphQL\Query\ArtistsQuery::class,
+                'album' => \App\GraphQL\Query\AlbumQuery::class,
+                'albums' => \App\GraphQL\Query\AlbumsQuery::class,
+                'artist' => \App\GraphQL\Query\ArtistQuery::class,
+                'song' => \App\GraphQL\Query\SongQuery::class,
+                'songs' => \App\GraphQL\Query\SongsQuery::class
             ],
             'mutation' => [
-                // 'example_mutation'  => ExampleMutation::class,
+//                'createArtist' => \App\GraphQL\Mutation\CreateArtistMutation::class
             ],
             'middleware' => [],
             'method' => ['get', 'post'],
@@ -120,8 +125,10 @@ return [
     // ]
     //
     'types' => [
-        'Artist' => \App\GraphQL\Type\ArtistType::class
+        'Artist' => \App\GraphQL\Type\ArtistType::class,
         // 'relation_example'  => ExampleRelationType::class,
+         'Album' => \App\GraphQL\Type\AlbumType::class,
+        'Song' => \App\GraphQL\Type\SongType::class
     ],
 
     // This callable will be passed the Error object for each errors GraphQL catch.
